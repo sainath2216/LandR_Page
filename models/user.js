@@ -16,6 +16,7 @@ userSchema.methods.generateAuthToken = function () {
   return token;
 };
 
+
 const User = mongoose.model("user", userSchema);
 
 const validate = (data) => {
@@ -24,9 +25,9 @@ const validate = (data) => {
     min: 5, // Minimum length of 8 characters
     max: 30, // Maximum length of 30 characters
     lowerCase: 1, // At least 1 lowercase letter
-    upperCase: 1, // At least 1 uppercase letter
-    numeric: 1, // At least 1 numeric character
-    symbol: 1, // At least 1 special symbol
+    upperCase: 0, // At least 1 uppercase letter
+    numeric: 0, // At least 1 numeric character
+    symbol: 0, // At least 1 special symbol
     requirementCount: 3, // Password must meet at least 3 of these criteria
   };
 

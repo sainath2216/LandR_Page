@@ -18,4 +18,4 @@ app.use("/api/register", userRoutes);
 app.use("/api/login", authRoutes);
 
 const port = process.env.PORT || 3000;
-app.listen(port, console.log(`Listening on port ${port}...`));
+app.listen(port, console.log(`Listening on port http://localhost:${port}`));
