@@ -13,7 +13,9 @@ connection();
 app.use(express.json());
 app.use(cors());
 
-
+app.get('/', (req, res) => {
+    res.send("Welcome to User database");
+  })
 
 // routes
 app.use("/api/register", userRoutes);
